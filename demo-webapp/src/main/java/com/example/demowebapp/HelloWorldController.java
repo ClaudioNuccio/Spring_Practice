@@ -16,5 +16,4 @@ public class HelloWorldController {
     public String ciaoUser (@RequestParam String nome, String location) {
         return "Ciao " + nome + " com'è il tempo in " + location + "?";
     }
-
 }
