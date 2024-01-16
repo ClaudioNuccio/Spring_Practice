@@ -1,0 +1,20 @@
+package com.example.demowebapp;
+
+import org.springframework.web.bind.annotation.*;
+
+import static org.springframework.web.bind.annotation.RequestMethod.GET;
+
+@RestController
+@RequestMapping("v1/")
+public class HelloWorldController {
+    @GetMapping (path = "helloWorld")
+    public String helloWorld () {
+        return "Hello World!";
+    }
+
+    @GetMapping (path = "helloUser")
+    public String ciaoUser (@RequestParam String nome, String location) {
+        return "Ciao " + nome + " com'è il tempo in " + location;
+    }
+
+}
