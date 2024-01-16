@@ -12,9 +12,9 @@ public class HelloWorldController {
         return "Hello World!";
     }
 
-    @GetMapping (path = "helloUser")
+    @GetMapping (path = "ciao")
     public String ciaoUser (@RequestParam String nome, String location) {
-        return "Ciao " + nome + " com'è il tempo in " + location;
+        return "Ciao " + nome + " com'è il tempo in " + location + "?";
     }
 
 }
