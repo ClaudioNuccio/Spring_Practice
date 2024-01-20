@@ -6,11 +6,11 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("v1/")
     public class nameController {
-    @GetMapping("getNome")
+    @GetMapping(path ="Name")
     public String getName (@RequestParam String name){
         return name;
     }
-    @PostMapping("postNome")
+    @PostMapping(path ="Name")
     public StringBuilder postName (@RequestParam String name){
         StringBuilder invertedName = new StringBuilder(name);
         return  invertedName.reverse();
