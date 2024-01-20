@@ -1,4 +1,4 @@
-package com.example.swaggerPractice;
+package com.example.swaggerPractice.controllers;
 
 import org.springframework.web.bind.annotation.*;
 
