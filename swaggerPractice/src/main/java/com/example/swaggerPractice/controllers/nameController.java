@@ -27,7 +27,7 @@ public class nameController {
     @Operation(
             summary = "Retrieve the name by Request paramter",
             description = "Get a name object and reverse it by specifying its parameter. The response is a StringBuilder with the name itself reversed.",
-            tags = { "nameController", "get" })
+            tags = { "nameController", "post" })
     @ApiResponses({
             @ApiResponse(responseCode = "200", content = { @Content(schema = @Schema(implementation = nameController.class), mediaType = "application/json") }),
             @ApiResponse(responseCode = "404", content = { @Content(schema = @Schema()) }),
