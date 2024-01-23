@@ -20,7 +20,7 @@ public class nameController {
             @ApiResponse(responseCode = "200", content = { @Content(schema = @Schema(implementation = nameController.class), mediaType = "application/json") }),
             @ApiResponse(responseCode = "404", content = { @Content(schema = @Schema()) }),
             @ApiResponse(responseCode = "500", content = { @Content(schema = @Schema()) }) })
-    @GetMapping(path = "Name")
+    @GetMapping(path = "getname")
     public String getName(@RequestParam String name) {
         return name;
     }
@@ -32,7 +32,7 @@ public class nameController {
             @ApiResponse(responseCode = "200", content = { @Content(schema = @Schema(implementation = nameController.class), mediaType = "application/json") }),
             @ApiResponse(responseCode = "404", content = { @Content(schema = @Schema()) }),
             @ApiResponse(responseCode = "500", content = { @Content(schema = @Schema()) }) })
-    @PostMapping(path = "Name")
+    @PostMapping(path = "createreversedname")
     public StringBuilder postName(@RequestParam String name) {
         StringBuilder invertedName = new StringBuilder(name);
         return  invertedName.reverse();
