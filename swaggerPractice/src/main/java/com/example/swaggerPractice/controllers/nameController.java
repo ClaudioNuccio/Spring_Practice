@@ -17,9 +17,9 @@ public class nameController {
             description = "Get a name object by specifying its parameter. The response is a String with the name itself.",
             tags = { "nameController", "get" })
     @ApiResponses({
-            @ApiResponse(responseCode = "200", content = { @Content(schema = @Schema(implementation = nameController.class), mediaType = "application/json") }),
-            @ApiResponse(responseCode = "404", content = { @Content(schema = @Schema()) }),
-            @ApiResponse(responseCode = "500", content = { @Content(schema = @Schema()) }) })
+            @ApiResponse(responseCode = "200", description = "Returns the name in the parameter",content = { @Content(schema = @Schema(implementation = nameController.class), mediaType = "application/json") }),
+            @ApiResponse(responseCode = "400", description = "Malformed name parameter", content = { @Content(schema = @Schema()) }),
+            @ApiResponse(responseCode = "404", description = "Name not found or wrong mapping", content = { @Content(schema = @Schema()) }) })
     @GetMapping(path = "getname")
     public String getName(@RequestParam String name) {
         return name;
@@ -29,9 +29,9 @@ public class nameController {
             description = "Get a name object and reverse it by specifying its parameter. The response is a StringBuilder with the name itself reversed.",
             tags = { "nameController", "post" })
     @ApiResponses({
-            @ApiResponse(responseCode = "200", content = { @Content(schema = @Schema(implementation = nameController.class), mediaType = "application/json") }),
-            @ApiResponse(responseCode = "404", content = { @Content(schema = @Schema()) }),
-            @ApiResponse(responseCode = "500", content = { @Content(schema = @Schema()) }) })
+            @ApiResponse(responseCode = "200", description = "Returns the name in the parameter reversed ",content = { @Content(schema = @Schema(implementation = nameController.class), mediaType = "application/json") }),
+            @ApiResponse(responseCode = "400" , description = "Malformed name parameter", content = { @Content(schema = @Schema()) }),
+            @ApiResponse(responseCode = "404", description = "Name not found or wrong mapping", content = { @Content(schema = @Schema()) }) })
     @PostMapping(path = "createreversedname")
     public StringBuilder postName(@RequestParam String name) {
         StringBuilder invertedName = new StringBuilder(name);
