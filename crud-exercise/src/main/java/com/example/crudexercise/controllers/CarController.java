@@ -45,6 +45,6 @@ public class CarController {
     }
     @DeleteMapping(path = "deleteall")
     public void deleteAll ( long id){
-        carRepository.deleteAllById(Collections.singleton(id));
+        carRepository.deleteAll();
     }
 }
