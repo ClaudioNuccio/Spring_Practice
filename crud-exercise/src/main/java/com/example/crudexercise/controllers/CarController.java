@@ -43,8 +43,8 @@ public class CarController {
     public void deleteOne (@PathVariable long id){
         carRepository.deleteById(id);
     }
-    @DeleteMapping(path = "deleteall/{id}")
-    public void deleteAll (@PathVariable long id){
+    @DeleteMapping(path = "deleteall")
+    public void deleteAll ( long id){
         carRepository.deleteAllById(Collections.singleton(id));
     }
 }
