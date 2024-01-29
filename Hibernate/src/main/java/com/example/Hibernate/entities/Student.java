@@ -16,12 +16,12 @@ import java.util.Set;
 @AllArgsConstructor
 public class Student {
 @Id
-@GeneratedValue (strategy = GenerationType.AUTO)
+@GeneratedValue (strategy = GenerationType.IDENTITY)
 private long student_id;
     @Column(nullable = false)
-    private String firstName;
+    private String first_Name;
     @Column(nullable = false)
-    private String lastname;
+    private String last_name;
     @Column(nullable = false, unique = true)
     private String email;
 }
