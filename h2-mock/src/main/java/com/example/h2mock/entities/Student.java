@@ -17,7 +17,7 @@ import java.util.Set;
 public class Student {
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
-    private long student_id;
+    private long studentId;
     @Column(nullable = false)
     private String first_Name;
     @Column(nullable = false)
