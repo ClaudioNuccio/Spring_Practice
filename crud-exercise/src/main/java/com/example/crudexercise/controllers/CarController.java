@@ -36,8 +36,14 @@ public class CarController {
 
     @PutMapping(path = "/update/{id}")
     public Car updateCar(@PathVariable long id, @RequestBody Car car){
-        car.setId(id);
-        return carRepository.saveAndFlush(car);
+        Car nullcar = null;
+        if (!carRepository.existsById(id)){
+            return nullcar;
+        }
+        else {
+            car.setId(id);
+            return carRepository.saveAndFlush(car);
+        }
     }
     @DeleteMapping(path = "deleteone/{id}")
     public void deleteOne (@PathVariable long id){
