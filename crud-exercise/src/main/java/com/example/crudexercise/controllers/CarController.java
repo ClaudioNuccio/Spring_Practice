@@ -36,14 +36,13 @@ public class CarController {
     }
 
 
-    @PutMapping(path = "/update/{id}")
+    @PatchMapping(path = "/update/{id}")
     public Car updateCar(@PathVariable long id, @RequestBody Car car){
         Car nullcar = null;
         if (!carRepository.existsById(id)){
             return nullcar;
         }
         else {
-            car.setId(id);
             return carRepository.saveAndFlush(car);
         }
     }
