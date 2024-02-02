@@ -1,6 +1,6 @@
-package com.example.repository2.repositories;
+package repo.prog.languages.repositories;
 
-import com.example.repository2.entities.ProgrammingLanguage;
+import repo.prog.languages.entities.ProgrammingLanguage;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 

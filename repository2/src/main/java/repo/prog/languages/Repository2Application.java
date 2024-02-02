@@ -1,4 +1,4 @@
-package com.example.repository2;
+package repo.prog.languages;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

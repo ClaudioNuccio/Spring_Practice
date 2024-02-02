@@ -1,4 +1,4 @@
-package com.example.repository2.entities;
+package repo.prog.languages.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

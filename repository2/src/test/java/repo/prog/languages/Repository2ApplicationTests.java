@@ -1,4 +1,4 @@
-package com.example.repository2;
+package repo.prog.languages;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
