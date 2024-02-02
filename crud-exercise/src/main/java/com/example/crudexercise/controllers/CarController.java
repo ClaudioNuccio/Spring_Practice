@@ -3,6 +3,8 @@ package com.example.crudexercise.controllers;
 import com.example.crudexercise.entities.Car;
 import com.example.crudexercise.repositories.CarRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Collections;
@@ -46,8 +48,15 @@ public class CarController {
         }
     }
     @DeleteMapping(path = "deleteone/{id}")
-    public void deleteOne (@PathVariable long id){
-        carRepository.deleteById(id);
+    public ResponseEntity<Car> deleteone(@PathVariable long id){
+        boolean exist = carRepository.existsById(id);
+        if(exist){
+            carRepository.deleteById(id);
+            return new ResponseEntity<>(HttpStatus.OK);
+        }
+        else {
+            return new ResponseEntity<>(HttpStatus.CONFLICT);
+        }
     }
     @DeleteMapping(path = "deleteall")
     public void deleteAll (){
