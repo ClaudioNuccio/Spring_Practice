@@ -25,7 +25,7 @@ public class MonthInterceptor implements HandlerInterceptor {
             new Month(5, "May", "Maggio", "Mai"),
             new Month(6, "June", "Giugno", "Juni")));
 
-
+@Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         String monthIdString = request.getHeader("monthNumber");
         if (monthIdString == null) {
