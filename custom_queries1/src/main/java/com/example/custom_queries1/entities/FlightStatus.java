@@ -1,2 +1,7 @@
-package com.example.custom_queries1.entities;public enum FlightStatus {
+package com.example.custom_queries1.entities;
+
+public enum FlightStatus {
+    ONTIME,
+    DELAYED,
+    CANCELLED
 }
