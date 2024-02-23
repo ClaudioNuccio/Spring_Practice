@@ -1,9 +1,6 @@
 package com.example.custom_queries1.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Enumerated;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.*;
 
 @Table
@@ -19,6 +16,6 @@ public class Flight {
     private String description;
     private String fromAirport;
     private String toAirport;
-    @Enumerated
+    @Enumerated(EnumType.STRING)
     private FlightStatus status;
 }
