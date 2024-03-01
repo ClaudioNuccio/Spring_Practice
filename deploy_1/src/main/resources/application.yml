@@ -1,0 +1,5 @@
+devName: Claudio
+server:
+  port: 7070
+spring:
+  datasource:
