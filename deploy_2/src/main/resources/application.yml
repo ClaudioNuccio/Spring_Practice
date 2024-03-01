@@ -1,0 +1,18 @@
+server:
+  port: 5000  # Porta predefinita per l'ambiente di produzione
+
+---
+spring:
+  config:
+    activate:
+      on-profile: test
+server:
+  port: 4000  # Porta per l'ambiente di sviluppo
+
+---
+server:
+  port: 7070  # Porta per l'ambiente di sviluppo
+spring:
+  config:
+    activate:
+      on-profile: prod
